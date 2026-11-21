@@ -1,0 +1,43 @@
+name: Sync watchlist
+
+on:
+  schedule:
+    - cron: "17 9 * * *" # every day around 4:17 AM Eastern
+  workflow_dispatch: # adds a "Run workflow" button so you can sync any time
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pull watchlist + streaming info
+        run: node scripts/sync.mjs
+        env:
+          LETTERBOXD_USERNAME: ${{ vars.LETTERBOXD_USERNAME }}
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          WATCH_REGION: ${{ vars.WATCH_REGION || 'US' }}
+
+      - name: Save changes
+        run: |
+          git config user.name "watchlist-bot"
+          git config user.email "watchlist-bot@users.noreply.github.com"
+          git add data/watchlist.json
+          if git diff --staged --quiet; then
+            echo "No changes today."
+          else
+            git commit -m "Sync watchlist $(date -u +%Y-%m-%d)"
+            git push
+          fi
