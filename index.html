@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#14110f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tonight">
+<title>What to Watch</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14110f;
+    --panel: #1e1a17;
+    --line: #2f2925;
+    --ink: #f3ece4;
+    --dim: #a99d91;
+    --accent: #ff8a3d;
+    --accent-ink: #1b0f05;
+    --good: #7fd18b;
+    --radius: 18px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.5 Inter, system-ui, sans-serif;
+    min-height: 100dvh;
+    padding: max(16px, env(safe-area-inset-top)) 16px max(24px, env(safe-area-inset-bottom));
+  }
+  .wrap { max-width: 520px; margin: 0 auto; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+  h1 { font: 800 28px/1.1 Fraunces, Georgia, serif; letter-spacing: -0.02em; }
+  h1 span { color: var(--accent); }
+  .meta { color: var(--dim); font-size: 13px; text-align: right; }
+
+  .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; background: var(--panel); padding: 5px; border-radius: 14px; border: 1px solid var(--line); }
+  .modes button { border: 0; background: transparent; color: var(--dim); font: 600 14px Inter, sans-serif; padding: 10px 4px; border-radius: 10px; cursor: pointer; }
+  .modes button[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+
+  details.svc { margin-top: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 14px; }
+  details.svc summary { list-style: none; cursor: pointer; padding: 12px 14px; font-weight: 600; font-size: 14px; display: flex; justify-content: space-between; }
+  details.svc summary::-webkit-details-marker { display: none; }
+  details.svc summary::after { content: "▾"; color: var(--dim); }
+  details.svc[open] summary::after { content: "▴"; }
+  .svc-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 14px; }
+  .svc-list label { display: flex; align-items: center; gap: 6px; padding: 6px 10px 6px 6px; border-radius: 999px; border: 1px solid var(--line); font-size: 13px; cursor: pointer; user-select: none; }
+  .svc-list input { display: none; }
+  .svc-list img { width: 22px; height: 22px; border-radius: 6px; }
+  .svc-list label:has(input:checked) { border-color: var(--accent); background: rgba(255,138,61,.12); }
+  .svc-hint { color: var(--dim); font-size: 12px; padding: 0 14px 12px; }
+
+  .card { margin-top: 16px; background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .card.enter { animation: rise .35s cubic-bezier(.2,.8,.2,1); }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px) scale(.98); } }
+  .hero { display: grid; grid-template-columns: 120px 1fr; gap: 14px; padding: 14px; }
+  .poster { width: 120px; aspect-ratio: 2/3; border-radius: 10px; object-fit: cover; background: var(--line); display: block; }
+  .title { font: 800 24px/1.12 Fraunces, Georgia, serif; letter-spacing: -0.01em; }
+  .sub { color: var(--dim); font-size: 14px; margin-top: 6px; }
+  .overview { padding: 0 14px 14px; color: #d9cfc4; font-size: 15px; }
+  .overview.clamp { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; cursor: pointer; }
+
+  .where { border-top: 1px solid var(--line); padding: 14px; }
+  .where h3 { font: 600 12px Inter, sans-serif; text-transform: uppercase; letter-spacing: .08em; color: var(--dim); margin-bottom: 8px; }
+  .where h3.on { color: var(--good); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .row:last-child { margin-bottom: 0; }
+  .prov { display: flex; align-items: center; gap: 8px; padding: 5px 10px 5px 5px; border-radius: 10px; background: #0f0c0a; border: 1px solid var(--line); font-size: 13px; color: var(--ink); text-decoration: none; }
+  .prov img { width: 28px; height: 28px; border-radius: 7px; }
+  .prov.mine { border-color: var(--accent); }
+  .nowhere { color: var(--dim); font-size: 14px; }
+
+  .links { display: flex; gap: 8px; padding: 0 14px 14px; }
+  .links a { flex: 1; text-align: center; padding: 10px; border-radius: 12px; border: 1px solid var(--line); color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; }
+
+  .pick { position: sticky; bottom: max(12px, env(safe-area-inset-bottom)); margin-top: 16px; width: 100%; border: 0; border-radius: 16px; padding: 18px; background: var(--accent); color: var(--accent-ink); font: 800 19px Fraunces, Georgia, serif; cursor: pointer; box-shadow: 0 10px 30px rgba(255,138,61,.25); }
+  .pick:active { transform: scale(.98); }
+  .pick:disabled { opacity: .4; }
+
+  .empty { margin-top: 16px; padding: 22px; background: var(--panel); border: 1px dashed var(--line); border-radius: var(--radius); color: var(--dim); }
+  .empty strong { color: var(--ink); display: block; font-size: 17px; margin-bottom: 6px; }
+
+  footer { margin-top: 22px; color: #6f655c; font-size: 11px; line-height: 1.5; text-align: center; }
+  footer a { color: inherit; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>What to <span>watch</span></h1>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+
+  <div class="modes" role="group" aria-label="What counts as available">
+    <button data-mode="stream">Streaming</button>
+    <button data-mode="rent">+ Rentals</button>
+    <button data-mode="any">Anything</button>
+  </div>
+
+  <details class="svc" id="svcBox">
+    <summary id="svcSummary">My services</summary>
+    <div class="svc-hint">Pick the services you have. Leave all unchecked to count every service.</div>
+    <div class="svc-list" id="svcList"></div>
+  </details>
+
+  <div id="out"></div>
+
+  <button class="pick" id="pick" disabled>Pick a movie</button>
+
+  <footer>
+    Watchlist from <a href="https://letterboxd.com" target="_blank" rel="noopener">Letterboxd</a>.
+    Streaming data from <a href="https://www.justwatch.com" target="_blank" rel="noopener">JustWatch</a> via TMDB.<br>
+    This product uses the TMDB API but is not endorsed or certified by TMDB.
+  </footer>
+</div>
+
+<script>
+const IMG = 'https://image.tmdb.org/t/p/';
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('wtw:' + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('wtw:' + k, JSON.stringify(v)); } catch {} },
+};
+
+let films = [];
+let mode = store.get('mode', 'stream');
+let mine = new Set(store.get('services', []));
+let recent = store.get('recent', []);
+let current = null;
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+function watchable(f) {
+  const p = f.providers || {};
+  const subs = [...(p.stream || []), ...(p.free || [])];
+  const subsOk = mine.size ? subs.some((x) => mine.has(x.id)) : subs.length > 0;
+  if (mode === 'any') return true;
+  if (mode === 'stream') return subsOk;
+  return subsOk || (p.rent || []).length > 0;
+}
+
+function eligible() { return films.filter(watchable); }
+
+function updateMeta(data) {
+  const n = eligible().length;
+  const when = data?.updated ? new Date(data.updated) : null;
+  const ago = when ? timeAgo(when) : '';
+  $('meta').innerHTML = `${n} of ${films.length} match` + (ago ? `<br>synced ${ago}` : '');
+  $('pick').disabled = n === 0;
+  $('pick').textContent = current ? 'Pick another' : 'Pick a movie';
+}
+
+function timeAgo(d) {
+  const h = (Date.now() - d) / 36e5;
+  if (h < 1) return 'just now';
+  if (h < 24) return Math.round(h) + 'h ago';
+  return Math.round(h / 24) + 'd ago';
+}
+
+function buildServices() {
+  const counts = new Map();
+  for (const f of films) for (const p of [...(f.providers?.stream || []), ...(f.providers?.free || [])]) {
+    const c = counts.get(p.id) || { ...p, n: 0 };
+    c.n++; counts.set(p.id, c);
+  }
+  const list = [...counts.values()].sort((a, b) => b.n - a.n);
+  $('svcList').innerHTML = list.map((p) => `
+    <label><input type="checkbox" value="${p.id}" ${mine.has(p.id) ? 'checked' : ''}>
+      ${p.logo ? `<img src="${IMG}w92${p.logo}" alt="">` : ''}${esc(p.name)} <span style="color:var(--dim)">${p.n}</span></label>`).join('')
+    || '<span class="nowhere">No streaming data yet.</span>';
+  $('svcList').onchange = (e) => {
+    const id = +e.target.value;
+    e.target.checked ? mine.add(id) : mine.delete(id);
+    store.set('services', [...mine]);
+    svcSummary(); updateMeta(window.__data);
+  };
+  svcSummary();
+}
+function svcSummary() { $('svcSummary').textContent = mine.size ? `My services (${mine.size})` : 'My services: all'; }
+
+function setMode(m) {
+  mode = m; store.set('mode', m);
+  document.querySelectorAll('.modes button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.mode === m));
+  updateMeta(window.__data);
+}
+
+function pick() {
+  const pool = eligible();
+  if (!pool.length) return;
+  const keep = Math.min(15, Math.floor(pool.length / 2));
+  const fresh = pool.filter((f) => !recent.slice(-keep).includes(f.slug));
+  const choices = fresh.length ? fresh : pool;
+  current = choices[Math.floor(Math.random() * choices.length)];
+  recent = [...recent.filter((s) => s !== current.slug), current.slug].slice(-40);
+  store.set('recent', recent);
+  render(current);
+  updateMeta(window.__data);
+}
+
+function provRow(list, link) {
+  return `<div class="row">${list.map((p) => `
+    <a class="prov ${mine.has(p.id) ? 'mine' : ''}" href="${esc(link || '#')}" target="_blank" rel="noopener">
+      ${p.logo ? `<img src="${IMG}w92${p.logo}" alt="">` : ''}${esc(p.name)}</a>`).join('')}</div>`;
+}
+
+function render(f) {
+  const p = f.providers || {};
+  const bits = [f.year, f.runtime ? `${Math.floor(f.runtime / 60)}h ${f.runtime % 60}m` : null, (f.genres || []).slice(0, 2).join(' · ') || null, f.rating ? `★ ${f.rating}` : null].filter(Boolean);
+  const sections = [];
+  if (p.stream?.length) sections.push(`<h3 class="on">Streaming</h3>${provRow(p.stream, f.watchLink)}`);
+  if (p.free?.length) sections.push(`<h3 class="on">Free</h3>${provRow(p.free, f.watchLink)}`);
+  if (p.rent?.length) sections.push(`<h3>Rent</h3>${provRow(p.rent.slice(0, 6), f.watchLink)}`);
+  if (!sections.length && p.buy?.length) sections.push(`<h3>Buy only</h3>${provRow(p.buy.slice(0, 6), f.watchLink)}`);
+  if (!sections.length) sections.push(`<div class="nowhere">Not streaming anywhere right now.</div>`);
+
+  $('out').innerHTML = `
+    <article class="card enter">
+      <div class="hero">
+        ${f.poster ? `<img class="poster" src="${IMG}w342${f.poster}" alt="">` : '<div class="poster"></div>'}
+        <div>
+          <div class="title">${esc(f.title)}</div>
+          <div class="sub">${bits.map(esc).join(' · ')}</div>
+        </div>
+      </div>
+      ${f.overview ? `<p class="overview clamp" onclick="this.classList.toggle('clamp')">${esc(f.overview)}</p>` : ''}
+      <section class="where">${sections.join('')}</section>
+      <div class="links">
+        <a href="${esc(f.url)}" target="_blank" rel="noopener">Letterboxd</a>
+        ${f.watchLink ? `<a href="${esc(f.watchLink)}" target="_blank" rel="noopener">All options</a>` : ''}
+      </div>
+    </article>`;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function showEmpty(title, body) {
+  $('out').innerHTML = `<div class="empty"><strong>${title}</strong>${body}</div>`;
+}
+
+document.querySelectorAll('.modes button').forEach((b) => (b.onclick = () => setMode(b.dataset.mode)));
+$('pick').onclick = pick;
+
+fetch('data/watchlist.json?v=' + Date.now())
+  .then((r) => r.json())
+  .then((data) => {
+    window.__data = data;
+    films = data.films || [];
+    buildServices();
+    setMode(mode);
+    if (!films.length) {
+      showEmpty('No watchlist yet', 'The first sync hasn’t run. In your GitHub repo, open <b>Actions → Sync watchlist → Run workflow</b>, wait a minute or two, then refresh.');
+      $('meta').textContent = '';
+    } else {
+      showEmpty('Ready when you are', `${films.length} films on your watchlist. Tap the button and go with it.`);
+    }
+  })
+  .catch(() => showEmpty('Couldn’t load your watchlist', 'data/watchlist.json is missing or broken. Run the sync workflow again.'));
+</script>
+</body>
+</html>
