@@ -12,6 +12,7 @@ const USER = (process.env.LETTERBOXD_USERNAME || '').trim().toLowerCase();
 const KEY = (process.env.TMDB_API_KEY || '').trim();
 const REGION = (process.env.WATCH_REGION || 'US').trim().toUpperCase();
 const OUT = 'data/watchlist.json';
+const ID_VERSION = 2;
 
 if (!USER) fail('LETTERBOXD_USERNAME is not set (Settings → Secrets and variables → Actions → Variables).');
 if (!KEY) fail('TMDB_API_KEY is not set (Settings → Secrets and variables → Actions → Secrets).');
@@ -94,8 +95,12 @@ function splitDisplay(display) {
 async function tmdbIdFromFilmPage(slug) {
   const html = await lb(`/film/${slug}/`);
   if (!html) return null;
-  const id = html.match(/data-tmdb-id="(\d+)"/)?.[1] || html.match(/themoviedb\.org\/(?:movie|tv)\/(\d+)/)?.[1];
-  const type = html.match(/data-tmdb-type="(movie|tv)"/)?.[1] || html.match(/themoviedb\.org\/(movie|tv)\//)?.[1] || 'movie';
+  // The TMDB link is the most reliable source: for TV miniseries Letterboxd leaves data-tmdb-id
+  // empty and still says data-tmdb-type="movie", but links to themoviedb.org/tv/<id>.
+  const link = html.match(/themoviedb\.org\/(movie|tv)\/(\d+)/);
+  if (link) return { tmdbId: +link[2], tmdbType: link[1] };
+  const id = html.match(/data-tmdb-id="(\d+)"/)?.[1];
+  const type = html.match(/data-tmdb-type="(movie|tv)"/)?.[1] || 'movie';
   return id ? { tmdbId: +id, tmdbType: type } : null;
 }
 
@@ -180,7 +185,8 @@ console.log(`Watchlist: ${watchlist.size} films`);
 const entries = [];
 for (const [slug, display] of watchlist) {
   const prev = previous[slug];
-  let ids = prev?.tmdbId ? { tmdbId: prev.tmdbId, tmdbType: prev.tmdbType || 'movie' } : null;
+  // idv bumps when the id-matching logic changes, forcing a one-time re-match of every film.
+  let ids = prev?.tmdbId && prev.idv === ID_VERSION ? { tmdbId: prev.tmdbId, tmdbType: prev.tmdbType || 'movie' } : null;
   if (!ids) {
     try {
       ids = await tmdbIdFromFilmPage(slug);
@@ -206,6 +212,7 @@ const films = await pool(entries, 6, async ({ slug, display, ids }) => {
     url: `https://letterboxd.com/film/${slug}/`,
     tmdbId: ids?.tmdbId ?? null,
     tmdbType: ids?.tmdbType ?? null,
+    idv: ID_VERSION,
     title: details?.title || base.title || slug,
     year: details?.year ?? base.year,
     ...(details || { providers: { stream: [], free: [], rent: [], buy: [] } }),
