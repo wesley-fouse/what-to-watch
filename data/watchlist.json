@@ -1,7 +1,7 @@
 {
  "user": "wesleyfouse",
  "region": "US",
- "updated": "2026-11-21T21:21:38.513Z",
+ "updated": "2026-11-22T17:08:49.345Z",
  "count": 153,
  "films": [
   {
@@ -647,11 +647,6 @@
       "id": 1855,
       "name": "Starz Apple TV channel",
       "logo": "/lgxDo2a3iGr617vm1rf0k5Hc8jz.png"
-     },
-     {
-      "id": 634,
-      "name": "Starz Roku Premium Channel",
-      "logo": "/tKembbxL7cYdDvFK70xBecbN0G8.png"
      }
     ],
     "free": [
@@ -2437,11 +2432,6 @@
     ],
     "free": [
      {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     },
-     {
       "id": 235,
       "name": "YouTube Free",
       "logo": "/gqaJWT5oFiJyVDojVLYRSFPbhQ1.png"
@@ -3320,11 +3310,6 @@
      }
     ],
     "free": [
-     {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     },
      {
       "id": 235,
       "name": "YouTube Free",
@@ -4796,11 +4781,6 @@
       "id": 582,
       "name": "Paramount+ Amazon Channel",
       "logo": "/bxX0YVOCY7bI85BKRlJAAQ2EjUR.png"
-     },
-     {
-      "id": 633,
-      "name": "Paramount+ Roku Premium Channel",
-      "logo": "/tnZCMxbcKdxuVmjxefyXCaip7q3.png"
      }
     ],
     "free": [],
@@ -5997,11 +5977,6 @@
     "stream": [],
     "free": [
      {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     },
-     {
       "id": 235,
       "name": "YouTube Free",
       "logo": "/gqaJWT5oFiJyVDojVLYRSFPbhQ1.png"
@@ -7031,13 +7006,7 @@
    "watchLink": "https://www.themoviedb.org/movie/473033-uncut-gems/watch?locale=US",
    "providers": {
     "stream": [],
-    "free": [
-     {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     }
-    ],
+    "free": [],
     "rent": [
      {
       "id": 10,
@@ -7433,11 +7402,6 @@
      }
     ],
     "free": [
-     {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     },
      {
       "id": 73,
       "name": "Tubi TV",
@@ -9785,11 +9749,6 @@
       "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png"
      },
      {
-      "id": 636,
-      "name": "MGM Plus Roku Premium Channel",
-      "logo": "/surh9i8VYeeq9186fKHnUg5Q5dg.png"
-     },
-     {
       "id": 2528,
       "name": "YouTube TV",
       "logo": "/48bVXEIyCLSL9pZUQ7gB9ToyWto.png"
@@ -10448,11 +10407,6 @@
       "id": 1855,
       "name": "Starz Apple TV channel",
       "logo": "/lgxDo2a3iGr617vm1rf0k5Hc8jz.png"
-     },
-     {
-      "id": 634,
-      "name": "Starz Roku Premium Channel",
-      "logo": "/tKembbxL7cYdDvFK70xBecbN0G8.png"
      }
     ],
     "free": [],
@@ -10552,11 +10506,6 @@
       "id": 1855,
       "name": "Starz Apple TV channel",
       "logo": "/lgxDo2a3iGr617vm1rf0k5Hc8jz.png"
-     },
-     {
-      "id": 634,
-      "name": "Starz Roku Premium Channel",
-      "logo": "/tKembbxL7cYdDvFK70xBecbN0G8.png"
      }
     ],
     "free": [],
@@ -11304,11 +11253,6 @@
       "logo": "/lgxDo2a3iGr617vm1rf0k5Hc8jz.png"
      },
      {
-      "id": 634,
-      "name": "Starz Roku Premium Channel",
-      "logo": "/tKembbxL7cYdDvFK70xBecbN0G8.png"
-     },
-     {
       "id": 2745,
       "name": "Sony Pictures Core Amazon Channel",
       "logo": "/uNyIRlzYb0Hf7Ix6Q3MKms0ERgA.png"
@@ -11471,13 +11415,7 @@
    "rating": 7.2,
    "watchLink": "https://www.themoviedb.org/movie/8963-crimson-tide/watch?locale=US",
    "providers": {
-    "stream": [
-     {
-      "id": 636,
-      "name": "MGM Plus Roku Premium Channel",
-      "logo": "/surh9i8VYeeq9186fKHnUg5Q5dg.png"
-     }
-    ],
+    "stream": [],
     "free": [],
     "rent": [
      {
@@ -12422,11 +12360,6 @@
       "logo": "/48bVXEIyCLSL9pZUQ7gB9ToyWto.png"
      },
      {
-      "id": 633,
-      "name": "Paramount+ Roku Premium Channel",
-      "logo": "/tnZCMxbcKdxuVmjxefyXCaip7q3.png"
-     },
-     {
       "id": 397,
       "name": "BBC America",
       "logo": "/kB58rlVFpLTxMl1L9F0OKc82ulG.png"
@@ -12529,11 +12462,6 @@
    "watchLink": "https://www.themoviedb.org/movie/2108-the-breakfast-club/watch?locale=US",
    "providers": {
     "stream": [
-     {
-      "id": 2383,
-      "name": "Philo",
-      "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png"
-     },
      {
       "id": 1854,
       "name": "AMC Plus Apple TV channel",
@@ -13315,7 +13243,7 @@
     "Thriller"
    ],
    "overview": "In the smog-choked dystopian Los Angeles of 2019, blade runner Rick Deckard is called out of retirement to terminate a quartet of replicants who have escaped to Earth seeking their creator for a way to extend their short life spans.",
-   "poster": "/7veWi2jwVBjaM1saoslrE7UNkYT.jpg",
+   "poster": "/63N9uy8nd9j7Eog2axPQ8lbr3Wj.jpg",
    "rating": 7.9,
    "watchLink": "https://www.themoviedb.org/movie/78-blade-runner/watch?locale=US",
    "providers": {
