@@ -1,8 +1,8 @@
 {
  "user": "wesleyfouse",
  "region": "US",
- "updated": "2026-11-22T17:08:49.345Z",
- "count": 153,
+ "updated": "2026-11-23T21:20:16.877Z",
+ "count": 150,
  "films": [
   {
    "slug": "you-can-see-everything",
@@ -350,102 +350,6 @@
       "id": 7,
       "name": "Fandango At Home",
       "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     }
-    ],
-    "buy": [
-     {
-      "id": 10,
-      "name": "Amazon Video",
-      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
-     },
-     {
-      "id": 2,
-      "name": "Apple TV Store",
-      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
-     },
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     }
-    ]
-   }
-  },
-  {
-   "slug": "columbus-2017",
-   "url": "https://letterboxd.com/film/columbus-2017/",
-   "tmdbId": 414453,
-   "tmdbType": "movie",
-   "idv": 2,
-   "title": "Columbus",
-   "year": 2017,
-   "runtime": 104,
-   "genres": [
-    "Drama"
-   ],
-   "overview": "When a renowned architecture scholar falls suddenly ill during a speaking tour, his son Jin finds himself stranded in Columbus, Indiana - a small Midwestern city celebrated for its many significant modernist buildings. Jin strikes up a friendship with Casey, a young architecture enthusiast who works at the local library.",
-   "poster": "/3ZE5Wl3CdfUH4BkWRmyMKPHkWHx.jpg",
-   "rating": 7.1,
-   "watchLink": "https://www.themoviedb.org/movie/414453-columbus/watch?locale=US",
-   "providers": {
-    "stream": [],
-    "free": [
-     {
-      "id": 191,
-      "name": "Kanopy",
-      "logo": "/cltb8XKan9ierp23ItPmCOcVLRa.png"
-     },
-     {
-      "id": 2409,
-      "name": "Fawesome",
-      "logo": "/dNF4vWhF3TduWvOyfVxEyTqSNRl.png"
-     },
-     {
-      "id": 73,
-      "name": "Tubi TV",
-      "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png"
-     }
-    ],
-    "rent": [
-     {
-      "id": 10,
-      "name": "Amazon Video",
-      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
-     },
-     {
-      "id": 2,
-      "name": "Apple TV Store",
-      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
-     },
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     },
-     {
-      "id": 2565,
-      "name": "MovieMe",
-      "logo": "/pxmDUtLdaSCek4LUwme4h7wfsC9.png"
      }
     ],
     "buy": [
@@ -5838,125 +5742,6 @@
    }
   },
   {
-   "slug": "terminator-genisys",
-   "url": "https://letterboxd.com/film/terminator-genisys/",
-   "tmdbId": 87101,
-   "tmdbType": "movie",
-   "idv": 2,
-   "title": "Terminator Genisys",
-   "year": 2015,
-   "runtime": 126,
-   "genres": [
-    "Science Fiction",
-    "Action",
-    "Thriller"
-   ],
-   "overview": "The year is 2029. John Connor, leader of the resistance continues the war against the machines. At the Los Angeles offensive, John's fears of the unknown future begin to emerge when TECOM spies reveal a new plot by SkyNet that will attack him from both fronts; past and future, and will ultimately change warfare forever.",
-   "poster": "/oZRVDpNtmHk8M1VYy1aeOWUXgbC.jpg",
-   "rating": 6,
-   "watchLink": "https://www.themoviedb.org/movie/87101-terminator-genisys/watch?locale=US",
-   "providers": {
-    "stream": [
-     {
-      "id": 2303,
-      "name": "Paramount Plus Premium",
-      "logo": "/4N4BMd0Mm0kHAmF7RZgL5lW3cwc.png"
-     },
-     {
-      "id": 2616,
-      "name": "Paramount Plus Essential",
-      "logo": "/uPWQPyF4nqwtfPNmGcFcenU57HG.png"
-     },
-     {
-      "id": 582,
-      "name": "Paramount+ Amazon Channel",
-      "logo": "/bxX0YVOCY7bI85BKRlJAAQ2EjUR.png"
-     },
-     {
-      "id": 633,
-      "name": "Paramount+ Roku Premium Channel",
-      "logo": "/tnZCMxbcKdxuVmjxefyXCaip7q3.png"
-     },
-     {
-      "id": 1855,
-      "name": "Starz Apple TV channel",
-      "logo": "/lgxDo2a3iGr617vm1rf0k5Hc8jz.png"
-     }
-    ],
-    "free": [
-     {
-      "id": 212,
-      "name": "Hoopla",
-      "logo": "/gtjNBzAoGgUtYzt0UKXmwG34WWL.png"
-     }
-    ],
-    "rent": [
-     {
-      "id": 10,
-      "name": "Amazon Video",
-      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
-     },
-     {
-      "id": 2,
-      "name": "Apple TV Store",
-      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
-     },
-     {
-      "id": 2784,
-      "name": "JustWatch TV Store",
-      "logo": "/aaFIYn2NGPCo0rpLiWokbvNqNJd.png"
-     },
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     },
-     {
-      "id": 538,
-      "name": "Plex",
-      "logo": "/blAEhvx3XX8sV0fFVFk88FFjubs.png"
-     }
-    ],
-    "buy": [
-     {
-      "id": 10,
-      "name": "Amazon Video",
-      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
-     },
-     {
-      "id": 2,
-      "name": "Apple TV Store",
-      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
-     },
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     }
-    ]
-   }
-  },
-  {
    "slug": "the-iron-claw-2023",
    "url": "https://letterboxd.com/film/the-iron-claw-2023/",
    "tmdbId": 850165,
@@ -6068,6 +5853,11 @@
    "watchLink": "https://www.themoviedb.org/movie/9390-jerry-maguire/watch?locale=US",
    "providers": {
     "stream": [
+     {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     },
      {
       "id": 1825,
       "name": "HBO Max Amazon Channel",
@@ -6810,6 +6600,11 @@
    "providers": {
     "stream": [
      {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     },
+     {
       "id": 2358,
       "name": "Lionsgate+ Amazon Channel",
       "logo": "/1356slxu4QrHOMrEVDKHJXRo5sW.png"
@@ -7307,11 +7102,6 @@
       "id": 15,
       "name": "Hulu",
       "logo": "/44uAnmSqvA4yBOdbPWN8YgQHjWm.png"
-     },
-     {
-      "id": 257,
-      "name": "fuboTV",
-      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
      },
      {
       "id": 2528,
@@ -9215,105 +9005,6 @@
    }
   },
   {
-   "slug": "american-animals",
-   "url": "https://letterboxd.com/film/american-animals/",
-   "tmdbId": 489931,
-   "tmdbType": "movie",
-   "idv": 2,
-   "title": "American Animals",
-   "year": 2018,
-   "runtime": 117,
-   "genres": [
-    "Drama",
-    "Crime",
-    "Documentary"
-   ],
-   "overview": "Lexington, Kentucky, 2004. Four young men attempt to execute one of the most audacious art heists in the history of the United States.",
-   "poster": "/aLbdKxgxuOPvs6CTlmzoOQ4Yg3j.jpg",
-   "rating": 6.7,
-   "watchLink": "https://www.themoviedb.org/movie/489931-american-animals/watch?locale=US",
-   "providers": {
-    "stream": [
-     {
-      "id": 9,
-      "name": "Amazon Prime Video",
-      "logo": "/gMZdpavHmxFNnLpMHwVxfqeux2g.png"
-     },
-     {
-      "id": 257,
-      "name": "fuboTV",
-      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
-     },
-     {
-      "id": 201,
-      "name": "MUBI Amazon Channel",
-      "logo": "/w1hl8HszsPf5aAGT0mVY0O6LYP4.png"
-     },
-     {
-      "id": 2100,
-      "name": "Amazon Prime Video with Ads",
-      "logo": "/tpwTT1FpWqLLhxUfAuDavIXDDfI.png"
-     }
-    ],
-    "free": [
-     {
-      "id": 207,
-      "name": "The Roku Channel",
-      "logo": "/b7uhrYJtAe7b1ieJGg705vTbwrX.png"
-     },
-     {
-      "id": 332,
-      "name": "Fandango at Home Free",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     },
-     {
-      "id": 73,
-      "name": "Tubi TV",
-      "logo": "/9dEuvA8wg5TSeFBZlPxSVxFdimJ.png"
-     }
-    ],
-    "rent": [
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     }
-    ],
-    "buy": [
-     {
-      "id": 2,
-      "name": "Apple TV Store",
-      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
-     },
-     {
-      "id": 3,
-      "name": "Google Play Movies",
-      "logo": "/aZRENwYILujqs0RVOZutTh0BVGV.png"
-     },
-     {
-      "id": 192,
-      "name": "YouTube",
-      "logo": "/5Maob4o5w8oZnNeYpCDyVFD3M7X.png"
-     },
-     {
-      "id": 7,
-      "name": "Fandango At Home",
-      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
-     }
-    ]
-   }
-  },
-  {
    "slug": "blade-runner-2049",
    "url": "https://letterboxd.com/film/blade-runner-2049/",
    "tmdbId": 335984,
@@ -10682,7 +10373,13 @@
    "rating": 6.5,
    "watchLink": "https://www.themoviedb.org/movie/9664-flyboys/watch?locale=US",
    "providers": {
-    "stream": [],
+    "stream": [
+     {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     }
+    ],
     "free": [
      {
       "id": 2383,
@@ -11760,7 +11457,13 @@
    "rating": 7.6,
    "watchLink": "https://www.themoviedb.org/movie/64690-drive/watch?locale=US",
    "providers": {
-    "stream": [],
+    "stream": [
+     {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     }
+    ],
     "free": [],
     "rent": [
      {
@@ -11853,6 +11556,11 @@
    "watchLink": "https://www.themoviedb.org/movie/120-the-lord-of-the-rings-the-fellowship-of-the-ring/watch?locale=US",
    "providers": {
     "stream": [
+     {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     },
      {
       "id": 1825,
       "name": "HBO Max Amazon Channel",
@@ -13016,6 +12724,11 @@
    "watchLink": "https://www.themoviedb.org/movie/3110-shane/watch?locale=US",
    "providers": {
     "stream": [
+     {
+      "id": 257,
+      "name": "fuboTV",
+      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
+     },
      {
       "id": 2616,
       "name": "Paramount Plus Essential",
@@ -14218,7 +13931,8 @@
    "genres": [
     "Animation",
     "Family",
-    "Fantasy"
+    "Fantasy",
+    "Adventure"
    ],
    "overview": "A young girl, Chihiro, becomes trapped in a strange new world of spirits. When her parents undergo a mysterious transformation, she must call upon the courage she never knew she had to free her family.",
    "poster": "/39wmItIWsg5sZMyRUHLkWBcuVCM.jpg",
