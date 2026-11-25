@@ -1,7 +1,7 @@
 {
  "user": "wesleyfouse",
  "region": "US",
- "updated": "2026-11-24T20:08:57.694Z",
+ "updated": "2026-11-25T19:14:43.939Z",
  "count": 150,
  "films": [
   {
@@ -12,19 +12,51 @@
    "idv": 2,
    "title": "You Can See Everything",
    "year": 2026,
-   "runtime": 174,
+   "runtime": 175,
    "genres": [
     "Documentary"
    ],
    "overview": "Thirty-four days before she's sent to prison, notorious Silicon Valley founder Elizabeth Holmes invites a skeptical film crew to document her every move. What begins as an intimate portrait of an enigmatic felon becomes a mind-bending three-year journey into the abyss.",
    "poster": "/mVh3qkw2NUFxWWyF0G1hg2Wh0K5.jpg",
    "rating": 8.7,
-   "watchLink": null,
+   "watchLink": "https://www.themoviedb.org/movie/1765072-you-can-see-everything/watch?locale=US",
    "providers": {
     "stream": [],
     "free": [],
-    "rent": [],
-    "buy": []
+    "rent": [
+     {
+      "id": 10,
+      "name": "Amazon Video",
+      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
+     },
+     {
+      "id": 2,
+      "name": "Apple TV Store",
+      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
+     },
+     {
+      "id": 7,
+      "name": "Fandango At Home",
+      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
+     }
+    ],
+    "buy": [
+     {
+      "id": 10,
+      "name": "Amazon Video",
+      "logo": "/jn6TLbtaTZntTRX9UYucHJvpQx1.png"
+     },
+     {
+      "id": 2,
+      "name": "Apple TV Store",
+      "logo": "/qdEGArH3lKfFnAtYXMkSYk5wxuG.png"
+     },
+     {
+      "id": 7,
+      "name": "Fandango At Home",
+      "logo": "/wpOt6x0dRxTrIzuBosto4LGd7E9.png"
+     }
+    ]
    }
   },
   {
@@ -10361,13 +10393,7 @@
    "rating": 6.5,
    "watchLink": "https://www.themoviedb.org/movie/9664-flyboys/watch?locale=US",
    "providers": {
-    "stream": [
-     {
-      "id": 257,
-      "name": "fuboTV",
-      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
-     }
-    ],
+    "stream": [],
     "free": [
      {
       "id": 2383,
@@ -11178,13 +11204,7 @@
    "rating": 6.5,
    "watchLink": "https://www.themoviedb.org/movie/2133-the-perfect-storm/watch?locale=US",
    "providers": {
-    "stream": [
-     {
-      "id": 2383,
-      "name": "Philo",
-      "logo": "/mfbhzQwmQKjm7bLZPF5CTeu3Ilc.png"
-     }
-    ],
+    "stream": [],
     "free": [],
     "rent": [
      {
@@ -11544,11 +11564,6 @@
    "watchLink": "https://www.themoviedb.org/movie/120-the-lord-of-the-rings-the-fellowship-of-the-ring/watch?locale=US",
    "providers": {
     "stream": [
-     {
-      "id": 257,
-      "name": "fuboTV",
-      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
-     },
      {
       "id": 1825,
       "name": "HBO Max Amazon Channel",
@@ -12713,11 +12728,6 @@
    "providers": {
     "stream": [
      {
-      "id": 257,
-      "name": "fuboTV",
-      "logo": "/3wF8xISfVlcrc8X3jaa3uMUFGAr.png"
-     },
-     {
       "id": 2616,
       "name": "Paramount Plus Essential",
       "logo": "/uPWQPyF4nqwtfPNmGcFcenU57HG.png"
@@ -13654,6 +13664,11 @@
       "id": 2409,
       "name": "Fawesome",
       "logo": "/dNF4vWhF3TduWvOyfVxEyTqSNRl.png"
+     },
+     {
+      "id": 1963,
+      "name": "Xumo Play",
+      "logo": "/n6E9OeoQicCDd43PnLsMpVIVYFK.png"
      }
     ],
     "rent": [
